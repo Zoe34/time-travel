@@ -21,6 +21,18 @@ def begin_game():
     if response in YES:
         print_text("Let's begin!", 2)
 
+    name = input("What's your name?\n")
+    print(f"Hi {name}!")
+
+begin_game()
+
+# def run():
+    # '''
+    # This function integrates all the other functions and runs the game
+    # '''
+
+
+# run()
 
 
 
