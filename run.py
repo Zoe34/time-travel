@@ -83,6 +83,16 @@ def begin_game():
         print_text("She opens a drawer of her bedside table and pulls out a flask with a yellowish substance.", 1)
         print_text("'Drink this and try to sleep, we'll see each other again at some point'", 1)
         print_text("She gives you a warm smile and leaves the room, closing the door.", 1)
+        print_text("You wake up but have no idea how much tme has passed.", 1)
+        print_text("The room decor looks different. You look at the calendar.", 1)
+        print_text("1962; Great the drink worked", 1)
+        print_text("You get up and walk down to the only place you haven't", 1)
+        print_text("explored yet: the basement", 1)
+        print_text("The dark room appears to have a large metal construction", 1)
+        print_text("Quite odd for something in a household", 1)
+        print_text("The giant metal box has an entrance and two levels inside", 1)
+        print_text("One is red, the other blue. What's your pick?", 1)
+
     elif response in CARRY_ON:
         print_text("You walk downstairs", 1)
         print_text("You walk towards what seems to be the kitchen", 1)
@@ -90,22 +100,9 @@ def begin_game():
         print_text("The kitchen looks exatly like the room upstairs", 1)
         print_text("In fact it is the same room", 1)
         print_text("It's as though you never left that room...", 1)
-
-    while response in CARRY_ON:
         
 
-
 begin_game()
-
-
-# def run():
-
-    # '''
-    # This function integrates all the other functions and runs the game
-    # '''
-
-
-# run()
 
 
 
