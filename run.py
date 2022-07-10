@@ -1,6 +1,6 @@
 import time
 
-from keywords import(
+from keywords import (
     YES,
     NO,
     OPEN,
@@ -18,7 +18,7 @@ def print_text(text: str, delay: int):
     time.sleep(delay)
 
 
-def start_again(): 
+def start_again():
     '''
     Game begins again when the user decides to quit once asked "Are you ready?" 
     '''
@@ -61,7 +61,7 @@ def begin_game():
         print_text("You scan the room and see several unfamiliar items,", 2)
         print_text("such as various paintings on vintage, floral wallpaper", 2)
         print_text("Your hear a noise in the room next door.", 2)
-        print_text("A banging and the sound of moved items across a surface", 2)
+        print_text("A banging and sounds of moved items across a surface", 2)
     
     elif response in NO:
         print_text("Goodbye, thanks for coming.", 2)
@@ -85,11 +85,11 @@ def begin_game():
         print_text(f"'Oh I was expecting you {name}'", 2)
         print_text("She looks very pleased to see you.", 2)
         print_text(f"'We need to hurry up {name},'", 2)
-        print_text("otherwise you'll be stuck in this time period.", 2)
+        print_text("'otherwise you'll be stuck in this time period.'", 2)
         print_text("She opens a drawer of her bedside table", 2)
         print_text("and pulls out a flask with a yellowish substance.", 2)
         print_text("'Drink this and try to sleep,'", 2)
-        print_text("we'll see each other again at some point", 2)
+        print_text("'we'll see each other again at some point'", 2)
         print_text("She gives you a warm smile and leaves the room.", 2)
         print_text("You wake up but have no idea how much tme has passed.", 2)
         print_text("The room decor looks different.", 2)
