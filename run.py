@@ -10,7 +10,9 @@ from keywords import (
     ANSWER,
     IGNORE,
     UP,
-    DOWN
+    DOWN,
+    LEAVE,
+    EXPLORE
 )
 
 
@@ -200,7 +202,7 @@ def spin_up_or_down():
         print_text("You made it back, congratulations", 2)
         start_again()
     elif response in DOWN:
-        print_text("You spin upwards.", 2)
+        print_text("You spin down.", 2)
         print_text("Your surroundings become blurred.", 2)
         print_text("You start to sway and realise", 2)
         print_text("you can no longer hold yourself up.", 2)
@@ -215,7 +217,13 @@ def spin_up_or_down():
         print_text("You check the newspaper on top of the", 2)
         print_text("large table on the side.", 2)
         print_text("23.06.1962", 2)
-
+        print_text("You wonder who dropped the watch off", 2)
+        print_text("at the front door. They must have known you.", 2)
+    
+    print("do you wish to leave the house or explore the house?\n")
+    print("(leave/explore)")
+    response = input("")
+    
 
 def main():
     '''
