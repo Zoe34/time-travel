@@ -46,9 +46,10 @@ def begin_game():
     elif response in NO:
         print_text("Goodbye, thanks for coming:", 2)
         start_again()
-    
+
     global name
     name = input("What's your name?\n")
+
     print_text(f"Hi {name}!", 2)
     print_text("You have time travelled to the past.", 2)
     print_text("The year is 1920", 2)
@@ -219,11 +220,60 @@ def spin_up_or_down():
         print_text("23.06.1962", 2)
         print_text("You wonder who dropped the watch off", 2)
         print_text("at the front door. They must have known you.", 2)
-    
+        leave_or_explore()
+
+
+def leave_or_explore():
+    '''
+    Function allows user to pick between leave/explore choices
+    '''
     print("do you wish to leave the house or explore the house?\n")
     print("(leave/explore)")
     response = input("")
-    
+
+    if response not in [LEAVE, EXPLORE]:
+        print_text("Invalid response, please try again", 2)
+        response = input("")
+    while response in LEAVE:
+        print_text("You step outside", 2)
+        print_text("The house is in the countryside", 2)
+        print_text("surrounded by woodlands", 2)
+        print_text("As you walk further out you spot a silhouette", 2)
+        print_text("standing next to a tree", 2)
+        print_text("You try to ignore it and keep walking", 2)
+        print_text("You are now very far from your front door", 2)
+        print_text("The figure starts walking towards you", 2)
+        print_text("", 2)
+        print_text("He's running.", 2)
+        print_text("He runs up to you.", 2)
+        print_text('"I need that watch" says the man', 2)
+        print_text("He looks very impatient", 2)
+        print_text("Something doesn't feel right and", 2)
+        print_text("You begin to run", 2)
+        print_text("At this point the closest house is the ", 2)
+        print_text("neighbours house.", 2)
+        print_text("Your sprint to the front door", 2)
+        print_text("And frantically pound on the front door", 2)
+        print_text("A tall man opens the door", 2)
+        print_text("He glances at you and then", 2)
+        print_text("at the watch you're holding", 2)
+        print_text("He looks past you and sees the figure behind you", 2)
+        print_text("You read fear and distress from his face", 2)
+        print_text("He pushes you inside and slams the door shut", 2)
+        print_text(f"You must be {name}, I was told you would", 2)
+        print_text(f"be coming", 2)
+        print_text("He takes the broken watch and inspects it", 2)
+        print_text("We'll have to fix that if you want to return home", 2)
+        print_text("He walks into a small cluttered room and begins", 2)
+        print_text("to fix the smashed watch", 2)
+        print_text("A few minutes lates he hands you the watch", 2)
+        print_text("and instructs that you spin upwards", 2)
+        print_text("You follow the instructions and your vision ", 2)
+        print_text("becomes blurry again.", 2)
+        print_text("You have escaped back to your time, congratulations", 2)
+        start_again()
+        if response in EXPLORE:
+
 
 def main():
     '''
@@ -231,7 +281,7 @@ def main():
     '''
 
 
-begin_game()
+    begin_game()
 
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        main()
