@@ -1,3 +1,7 @@
+'''
+The import allows for a delay between text
+'''
+
 import time
 
 from keywords import (
@@ -31,6 +35,9 @@ def start_again():
     begin_game()
 
 
+name = ""
+
+
 def begin_game():
     '''
     This function runs the game and all the main questions for the user are
@@ -43,12 +50,11 @@ def begin_game():
         response = input("")
     if response in YES:
         print_text("Let's begin!", 2)
-    elif response in NO:
+        global name
+        name = input("What's your name?\n")
+    if response in NO:
         print_text("Goodbye, thanks for coming:", 2)
         start_again()
-
-    global name
-    name = input("What's your name?\n")
 
     print_text(f"Hi {name}!", 2)
     print_text("You have time travelled to the past.", 2)
@@ -285,6 +291,26 @@ def leave_or_explore():
         print_text("Try and set the lock to your year", 2)
         response = input("")
         print_text(f"You have chosen {response}", 2)
+        verify_user_response()
+
+
+def verify_user_response():
+    '''
+    The function verifies if the user is happy with their response for the
+    year combination
+    '''
+    print_text("Is that the correct year? (yes/no)", 2)
+    response = input("")
+    if response not in [YES, NO]:
+        print_text("Invalid response, please try again", 2)
+        response = input("")
+    while response in YES:
+        print_text("Congratulations, you completed the game", 2)
+        start_again()
+    if response in NO:
+        print_text("Try typing in the combination again", 2)
+        response = input("")
+        verify_user_response()
 
 
 def main():
