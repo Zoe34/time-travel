@@ -227,7 +227,7 @@ def leave_or_explore():
     '''
     Function allows user to pick between leave/explore choices
     '''
-    print("do you wish to leave the house or explore the house?\n")
+    print("Do you wish to leave the house or explore the house?\n")
     print("(leave/explore)")
     response = input("")
 
@@ -261,7 +261,7 @@ def leave_or_explore():
         print_text("You read fear and distress from his face", 2)
         print_text("He pushes you inside and slams the door shut", 2)
         print_text(f"You must be {name}, I was told you would", 2)
-        print_text(f"be coming", 2)
+        print_text("be coming", 2)
         print_text("He takes the broken watch and inspects it", 2)
         print_text("We'll have to fix that if you want to return home", 2)
         print_text("He walks into a small cluttered room and begins", 2)
@@ -272,7 +272,19 @@ def leave_or_explore():
         print_text("becomes blurry again.", 2)
         print_text("You have escaped back to your time, congratulations", 2)
         start_again()
-        if response in EXPLORE:
+    if response in EXPLORE:
+        print_text("You wonder off into the attic", 2)
+        print_text("Amongst all the clutter you spot", 2)
+        print_text("a wooden door; about a metre tall.", 2)
+        print_text("It's locked with a heavy padlock.", 2)
+        print_text("The current combinaton reads", 2)
+        print_text("1", 2)
+        print_text("9", 2)
+        print_text("6", 2)
+        print_text("2", 2)
+        print_text("Try and set the lock to your year", 2)
+        response = input("")
+        print_text(f"You have chosen {response}", 2)
 
 
 def main():
@@ -280,8 +292,8 @@ def main():
     This function runs the game and all the other functions
     '''
 
-
     begin_game()
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()
