@@ -16,7 +16,8 @@ from keywords import (
     UP,
     DOWN,
     LEAVE,
-    EXPLORE
+    EXPLORE,
+    NAME
 )
 
 
@@ -30,7 +31,7 @@ def print_text(text: str, delay: int):
 
 def start_again():
     '''
-    Game begins again when the user decides to quit once asked "Are you ready?"
+    Game begins again when the user decides to quit or loses the game
     '''
     begin_game()
 
@@ -40,6 +41,7 @@ def begin_game():
     This function runs the game and all the main questions for the user are
     placed here.
     '''
+    print_text(f"Hi {NAME}!", 2)
     print("Welcome to the journey. Would you like to begin? (yes/no)")
     response = input("")
     while response not in [YES, NO]:
@@ -47,13 +49,10 @@ def begin_game():
         response = input("")
     if response in YES:
         print_text("Let's begin!", 2)
-    global NAME
-    NAME = input("What's your name?\n")
     if response in NO:
         print_text("Goodbye, thanks for coming:", 2)
         start_again()
 
-    print_text(f"Hi {NAME}!", 2)
     print_text("You have time travelled to the past.", 2)
     print_text("The year is 1920", 2)
     print_text("You are looking for a way home.", 2)
@@ -99,7 +98,7 @@ def begin_game():
         print_text("'Drink this and try to sleep,'", 2)
         print_text("'we'll see each other again at some point'", 2)
         print_text("She gives you a warm smile and leaves the room.", 2)
-        print_text("You wake up but have no idea how much tme has passed.", 2)
+        print_text("You wake up but have no idea how much time has passed.", 2)
         print_text("The room decor looks different.", 2)
         print_text("You look at the calendar.", 2)
         print_text("1962; Great the drink worked", 2)

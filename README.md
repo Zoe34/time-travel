@@ -14,6 +14,10 @@ Some outcomes lead to a "Game over" message if the player lost.
 After winning and losing the game automatically restarts.
 
 ## User stories:
+- As a new user I would like to operate using simple words and make decisions within the game.
+- I would like to quickly understand how the game works when starting it.
+- I would like to receive confirmation of my choices whenever I decide about the course of the game.
+- I would like to play the game in the form of an interactive story, which contains a timeline and a plot.
 
 ## Features
 There is one main page from which the game operates and allows the user to submit their responses
@@ -44,14 +48,16 @@ The flowchart for this game was created using Lucidchart:
 ## Testing
 
 ### Bugs
-The bugs I came across are problems with the global name variable:
-- ms-toolsai.jupyter extension is not synced, but not added in .gitpod.yml
-- Constant name "name" doesn't conform to UPPER_CASE naming stylepylint(invalid-name)
-- Using the global statementpylint(global-statement)
+The bugs I came across with pylint:
+1. ms-toolsai.jupyter extension is not synced, but not added in .gitpod.yml:
+Fixed by clicking on the options in QuickFixes for .gitpod.yml
+2. Constant name "name" doesn't conform to UPPER_CASE naming stylepylint(invalid-name):
+Fixed by changing "name" to "NAME" on line 50, 51 and within the rest of the code.
+3. Using the global statementpylint(global-statement):
+The third bug was fixed by moving 'NAME' to the keywords file and adding it to the imported keywords list in run.py.
 
-- I fixed the first issue by clicking on the options in QuickFixes for .gitpod.yml
-- I fixed the second bug by changing "name" to "NAME" on line 51 and within the rest of the code.
 ### Remaining bugs
+All bugs have been fixed.
 ### Validator testing
 The game has been tested using PEP8 Python Validator and returned no problems.
 
@@ -60,3 +66,4 @@ The game has been tested using PEP8 Python Validator and returned no problems.
 ## Credits
 Code Institute has provided the template for this project.
 The flowchart for this game was made using Lucidchart
+Stackoverflow was used for guidance and help when creating this project.

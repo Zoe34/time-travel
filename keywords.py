@@ -1,6 +1,8 @@
-# This provides all the keywords 
-# that the player will use to make decisions
-# during the game
+'''
+This provides all the keywords
+that the player will use to make decisions
+during the game
+'''
 
 YES = "yes"
 NO = "no"
@@ -14,3 +16,4 @@ UP = "up"
 DOWN = "down"
 LEAVE = "leave"
 EXPLORE = "explore"
+NAME = input("What's your name?\n")
