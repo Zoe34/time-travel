@@ -12,6 +12,9 @@ The player must try to pick the right choices to move back to the current year.
 When the player manages to return to the present moment a congratulating message appears.
 Some outcomes lead to a "Game over" message if the player lost.
 After winning and losing the game automatically restarts.
+
+## User stories:
+
 ## Features
 There is one main page from which the game operates and allows the user to submit their responses
 
@@ -35,13 +38,19 @@ More options within the game to make it slightly longer.
 The game is based on a story which unfolds. The direction and outcome depend on the user's choice e.g., "answer/ignore".
 The text of the story is printed using "print_text" and the player is referred to by their name in the game using an f string: print_text(f"Hi {name}!", 2)
 The 2 after every line of text is the amount of time delayed between each printed line.
+The flowchart for this game was created using Lucidchart:
+![Flowchart image](assets/flowchart.png)
 
 ## Testing
-The game has been tested using PEP8 linter and returned no problems.
+
 ### Bugs
+The bugs I came across are problems with the global name variable.
 ### Remaining bugs
 ### Validator testing
+The game has been tested using PEP8 Python Validator and returned no problems.
 
 ## Deployment
 
 ## Credits
+Code Institute has provided the template for this project.
+The flowchart for this game was made using Lucidchart

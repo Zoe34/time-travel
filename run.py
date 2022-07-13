@@ -1,5 +1,5 @@
 '''
-The import allows for a delay between text
+The import allows for a delay between pieces of text
 '''
 
 import time
@@ -35,9 +35,6 @@ def start_again():
     begin_game()
 
 
-name = ""
-
-
 def begin_game():
     '''
     This function runs the game and all the main questions for the user are
@@ -50,8 +47,8 @@ def begin_game():
         response = input("")
     if response in YES:
         print_text("Let's begin!", 2)
-        global name
-        name = input("What's your name?\n")
+    global name
+    name = input("What's your name?\n")
     if response in NO:
         print_text("Goodbye, thanks for coming:", 2)
         start_again()
