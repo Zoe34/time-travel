@@ -1,6 +1,7 @@
 # Time Travel
 The Time Travel Game runs on Heroku and is a terminal game.
 It is a choice based game, where the player's input determines what happens
+The link to the game can be found here: https://time-travel22.herokuapp.com/
 
 
 ## How to play
@@ -54,10 +55,12 @@ The third bug was fixed by moving 'NAME' to the keywords file and adding it to t
 - As a new user I would like to operate using simple words and make decisions within the game:
 ![Question screenshot](assets/game-screenshots.png/decisions.png)
 
-
-- I would like to quickly understand how the game works when starting it.
-- I would like to receive confirmation of my choices whenever I decide about the course of the game.
-- I would like to play the game in the form of an interactive story, which contains a timeline and a plot.
+- I would like to quickly understand how the game works when starting it:
+![Explanation of the game](assets/game-screenshots.png/explanation.png)
+- I would like to receive confirmation of my choices whenever I decide about the course of the game:
+![Confirmation of choices](assets/game-screenshots.png/confirmation.png)
+- I would like to play the game in the form of an interactive story, which contains a timeline and a plot:
+![Main storyline](assets/game-screenshots.png/storyline.png)
 
 
 ### Remaining bugs
@@ -66,8 +69,25 @@ All bugs have been fixed.
 The game has been tested using PEP8 Python Validator and returned no problems.
 
 ## Deployment
+The repository was created in Github using "New" on the left - hand side in the repository section.
+The template was provided by Code Institute: https://github.com/Code-Institute-Org/python-essentials-template
+
+### GitHub:
+To open the code for this project through GitHub enter https://github.com/Zoe34/time-travel.git into the browser.
+Click the green "Gitpod" button
+Click "cancel" and then "More actions"; "Open in browser"
+
+### Deploying to Heroku:
+- New App clicked in the top right-hand corner of Heroku
+- The app was named time-travel22
+- The location was set to Europe before the app was created
+- The python and node.js buildpacks were added and saved
+- In the Deploy section the deployment was connected to GitHub
+- The repository was searched by name and connected to Heroku
+- The project was manually deployed
+- Once the project has been deployed "View" was clicked to open the deployed app.
 
 ## Credits
-Code Institute has provided the template for this project.
-The flowchart for this game was made using Lucidchart
-Stackoverflow was used for guidance and help when creating this project.
+- Code Institute has provided the template for this project.
+- The flowchart for this game was made using Lucidchart
+- Stackoverflow was used for guidance and help when creating this project.
