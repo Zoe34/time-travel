@@ -50,8 +50,8 @@ def begin_game():
     if response in YES:
         print_text("Let's begin!", 2)
     if response in NO:
-        print_text("Goodbye, thanks for coming:", 2)
-        start_again()
+        print_text("Goodbye, thanks for coming!", 2)
+        quit()
 
     print_text("You have time travelled to the past.", 2)
     print_text("The year is 1920", 2)
@@ -73,8 +73,8 @@ def begin_game():
         print_text("A banging and sounds of moved items across a surface", 2)
         open_or_carry_on()
     elif response in NO:
-        print_text("Goodbye, thanks for coming.", 2)
-        start_again()
+        print_text("Goodbye, thanks for coming!", 2)
+        quit()
 
 
 def open_or_carry_on():
@@ -135,13 +135,15 @@ def blue_or_red():
     while response not in [BLUE, RED]:
         print_text("invald response, please try again", 2)
     if response in RED:
-        print(f"You picked {response}")
+        print_text(f"You picked {response}", 2)
         print_text("You have been sucked into a black hole.", 2)
         print_text("", 1)
         print_text("The time capsule couldn't take the pressure", 2)
         print_text("", 1)
         print_text("Game over.", 2)
-        start_again()
+        print_text("", 1)
+        print_text("", 1)
+        quit()
     elif response in BLUE:
         print(f"You picked {response}")
         print_text("You feel the machine shaking and tumbling around.", 2)
@@ -153,7 +155,7 @@ def blue_or_red():
         print_text("Your mum walks in from the living room", 2)
         print_text(f"'Hi, {NAME}, how was school?'", 2)
         print_text("You made your way home, congratulations!", 2)
-        start_again()
+        quit()
 
 
 def open_or_not():
@@ -211,7 +213,7 @@ def spin_up_or_down():
         print_text("it is smashed, rusty and looks nothing like", 2)
         print_text("it did in the 1920s from which you came.", 2)
         print_text("You made it back, congratulations", 2)
-        start_again()
+        quit()
     elif response in DOWN:
         print_text("You spin down.", 2)
         print_text("Your surroundings become blurred.", 2)
@@ -281,7 +283,7 @@ def leave_or_explore():
         print_text("You follow the instructions and your vision ", 2)
         print_text("becomes blurry again.", 2)
         print_text("You have escaped back to your time, congratulations", 2)
-        start_again()
+        quit()
     if response in EXPLORE:
         explore_house()
 
@@ -318,7 +320,7 @@ def verify_user_response():
         response = input("")
     while response in YES:
         print_text("Congratulations, you completed the game", 2)
-        start_again()
+        quit()
     if response in NO:
         print_text("Try typing in the combination again", 2)
         response = input("")
