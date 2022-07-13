@@ -45,7 +45,7 @@ def begin_game():
     print("Welcome to the journey. Would you like to begin? (yes/no)")
     response = input("")
     while response not in [YES, NO]:
-        print_text("Please enter a valid response", 2)
+        print_text("Invalid response, please try again.", 2)
         response = input("")
     if response in YES:
         print_text("Let's begin!", 2)
@@ -60,7 +60,7 @@ def begin_game():
     response = input("")
 
     while response not in [YES, NO]:
-        print_text("Please enter a valid response", 2)
+        print_text("Invalid response, please try again.", 2)
         response = input("")
 
     if response in YES:
@@ -87,7 +87,7 @@ def open_or_carry_on():
     response = input("")
 
     while response not in [OPEN, CARRY_ON]:
-        print("Response is invalid")
+        print("Invalid response, please try again.")
         response = input("")
     if response in OPEN:
         print_text("You open the door and find an older woman.", 3)
@@ -134,8 +134,10 @@ def blue_or_red():
     print_text("blue/red", 3)
     response = input("")
     while response not in [BLUE, RED]:
-        print_text("invald response, please try again", 2)
+        print_text("Invalid response, please try again", 2)
     if response in RED:
+        print_text("", 2)
+        print_text("", 2)
         print_text(f"You picked {response}", 3)
         print_text("You have been sucked into a black hole.", 3)
         print_text("", 1)
@@ -168,7 +170,7 @@ def open_or_not():
     response = input("")
 
     while response not in [ANSWER, IGNORE]:
-        print_text("Response is invalid, please try again", 2)
+        print_text("Invalid response, please try again.", 2)
         response = input("")
     if response in ANSWER:
         print_text("You walk down the stairs and towards the front door", 3)
@@ -198,7 +200,7 @@ def spin_up_or_down():
     response = input("")
 
     while response not in [UP, DOWN]:
-        print_text("Response is invalid, please try again", 2)
+        print_text("Invalid response, please try again.", 2)
         response = input("")
     if response in UP:
         print_text("You spin upwards.", 3)

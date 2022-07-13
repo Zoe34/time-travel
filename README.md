@@ -1,6 +1,6 @@
 # Time Travel
 The Time Travel Game runs on Heroku and is a terminal game.
-It is a choice based game, where the player's input determines what happens
+It is a choice based game, where the player's input determines what happens.
 The link to the game can be found here: https://time-travel22.herokuapp.com/
 
 
@@ -13,24 +13,42 @@ The player must try to pick the right choices to move back to the current year.
 When the player manages to return to the present moment a congratulating message appears.
 Some outcomes lead to a "Game over" message if the player lost.
 After winning and losing the game automatically restarts.
+To refresh the game the player needs to click "RUN PROGRAM"
 
 ## Features
 There is one main page from which the game operates and allows the user to submit their responses
 
 ### Existing features
 Questions for the player and a selection of answers they can choose:
+![Question for the player](assets/game-screenshots.png/decisions.png)
 
 Sometimes the game confirms the choices made by the user by feeding back the answer:
+![Answer confirmation](assets/game-screenshots.png/confirmation.png)
+
 
 If the player inputs an answer that isn't within the list of options a message appears:
+![Invalid response message](assets/game-screenshots.png/invalid-response.png)
+
 
 During the game lines of text appear, telling a story. The output depends on the choices the player makes throughout the game:
+![Outcome of player's decision](assets/game-screenshots.png/outcome-one.png)
+![Outcome of player's decision](assets/game-screenshots.png/outcome-two.png)
 
-When the player loses the game or decides they no longer want to play the game is reset and a goodbye message appears:
+
+
+When the player loses the game a message appears:
+![Message when player loses](assets/game-screenshots.png/game-lost.png)
+
+When the player wins the game a message appears:
+![Message when player wins](assets/game-screenshots.png/game-won.png)
+
+When the player decides they no longer want to play this message appears:
+![Message when player quits](assets/game-screenshots.png/game-quit.png)
 
 
 ### Future Features
-More options within the game to make it slightly longer.
+- More options within the game to make it slightly longer.
+- A score/point count
 
 
 ## Data model
@@ -67,6 +85,8 @@ The third bug was fixed by moving 'NAME' to the keywords file and adding it to t
 All bugs have been fixed.
 ### Validator testing
 The game has been tested using PEP8 Python Validator and returned no problems.
+
+## Technology:
 
 ## Deployment
 The repository was created in Github using "New" on the left - hand side in the repository section.
