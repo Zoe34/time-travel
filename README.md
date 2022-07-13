@@ -13,12 +13,6 @@ When the player manages to return to the present moment a congratulating message
 Some outcomes lead to a "Game over" message if the player lost.
 After winning and losing the game automatically restarts.
 
-## User stories:
-- As a new user I would like to operate using simple words and make decisions within the game.
-- I would like to quickly understand how the game works when starting it.
-- I would like to receive confirmation of my choices whenever I decide about the course of the game.
-- I would like to play the game in the form of an interactive story, which contains a timeline and a plot.
-
 ## Features
 There is one main page from which the game operates and allows the user to submit their responses
 
@@ -55,6 +49,16 @@ Fixed by clicking on the options in QuickFixes for .gitpod.yml
 Fixed by changing "name" to "NAME" on line 50, 51 and within the rest of the code.
 3. Using the global statementpylint(global-statement):
 The third bug was fixed by moving 'NAME' to the keywords file and adding it to the imported keywords list in run.py.
+
+### User stories:
+- As a new user I would like to operate using simple words and make decisions within the game:
+![Question screenshot](assets/game-screenshots.png/decisions.png)
+
+
+- I would like to quickly understand how the game works when starting it.
+- I would like to receive confirmation of my choices whenever I decide about the course of the game.
+- I would like to play the game in the form of an interactive story, which contains a timeline and a plot.
+
 
 ### Remaining bugs
 All bugs have been fixed.
