@@ -71,9 +71,17 @@ def begin_game():
         print_text("such as various paintings on vintage, floral wallpaper", 2)
         print_text("Your hear a noise in the room next door.", 2)
         print_text("A banging and sounds of moved items across a surface", 2)
+        open_or_carry_on()
     elif response in NO:
         print_text("Goodbye, thanks for coming.", 2)
         start_again()
+
+
+def open_or_carry_on():
+    '''
+    Function uses OPEN and CARRY_ON keywords to allow user to make a decision.
+    It is called by the begin_game() function
+    '''
     print("Do you want to open the door or carry on?\n")
     print("open/carry on\n")
     response = input("")
@@ -275,19 +283,27 @@ def leave_or_explore():
         print_text("You have escaped back to your time, congratulations", 2)
         start_again()
     if response in EXPLORE:
-        print_text("You wonder off into the attic", 2)
-        print_text("Amongst all the clutter you spot", 2)
-        print_text("a wooden door; about a metre tall.", 2)
-        print_text("It's locked with a heavy padlock.", 2)
-        print_text("The current combinaton reads", 2)
-        print_text("1", 2)
-        print_text("9", 2)
-        print_text("6", 2)
-        print_text("2", 2)
-        print_text("Try and set the lock to your year", 2)
-        response = input("")
-        print_text(f"You have chosen {response}", 2)
-        verify_user_response()
+        explore_house()
+
+
+def explore_house():
+    '''
+    Function calls verify_user_function so the player can input as many number
+    combinations as they want until they are happy with the outcome.
+    '''
+    print_text("You wonder off into the attic", 2)
+    print_text("Amongst all the clutter you spot", 2)
+    print_text("a wooden door; about a metre tall.", 2)
+    print_text("It's locked with a heavy padlock.", 2)
+    print_text("The current combinaton reads", 2)
+    print_text("1", 2)
+    print_text("9", 2)
+    print_text("6", 2)
+    print_text("2", 2)
+    print_text("Try and set the lock to your year", 2)
+    response = input("")
+    print_text(f"You have chosen {response}", 2)
+    verify_user_response()
 
 
 def verify_user_response():
