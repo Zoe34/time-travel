@@ -47,13 +47,13 @@ def begin_game():
         response = input("")
     if response in YES:
         print_text("Let's begin!", 2)
-    global name
-    name = input("What's your name?\n")
+    global NAME
+    NAME = input("What's your name?\n")
     if response in NO:
         print_text("Goodbye, thanks for coming:", 2)
         start_again()
 
-    print_text(f"Hi {name}!", 2)
+    print_text(f"Hi {NAME}!", 2)
     print_text("You have time travelled to the past.", 2)
     print_text("The year is 1920", 2)
     print_text("You are looking for a way home.", 2)
@@ -90,9 +90,9 @@ def begin_game():
         print_text("The woman looks very familiar.", 2)
         print_text("Her facial features look very similar to yours.", 2)
         print_text("You realise this is your great great grandmother", 2)
-        print_text(f"'Oh I was expecting you {name}'", 2)
+        print_text(f"'Oh I was expecting you {NAME}'", 2)
         print_text("She looks very pleased to see you.", 2)
-        print_text(f"'We need to hurry up {name},'", 2)
+        print_text(f"'We need to hurry up {NAME},'", 2)
         print_text("'otherwise you'll be stuck in this time period.'", 2)
         print_text("She opens a drawer of her bedside table", 2)
         print_text("and pulls out a flask with a yellowish substance.", 2)
@@ -144,7 +144,7 @@ def blue_or_red():
         print_text("and head to the house", 2)
         print_text("As you enter everything looks familiar.", 2)
         print_text("Your mum walks in from the living room", 2)
-        print_text(f"'Hi, {name}, how was school?'", 2)
+        print_text(f"'Hi, {NAME}, how was school?'", 2)
         print_text("You made your way home, congratulations!", 2)
         start_again()
 
@@ -263,7 +263,7 @@ def leave_or_explore():
         print_text("He looks past you and sees the figure behind you", 2)
         print_text("You read fear and distress from his face", 2)
         print_text("He pushes you inside and slams the door shut", 2)
-        print_text(f"You must be {name}, I was told you would", 2)
+        print_text(f"You must be {NAME}, I was told you would", 2)
         print_text("be coming", 2)
         print_text("He takes the broken watch and inspects it", 2)
         print_text("We'll have to fix that if you want to return home", 2)

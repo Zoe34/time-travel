@@ -44,7 +44,13 @@ The flowchart for this game was created using Lucidchart:
 ## Testing
 
 ### Bugs
-The bugs I came across are problems with the global name variable.
+The bugs I came across are problems with the global name variable:
+- ms-toolsai.jupyter extension is not synced, but not added in .gitpod.yml
+- Constant name "name" doesn't conform to UPPER_CASE naming stylepylint(invalid-name)
+- Using the global statementpylint(global-statement)
+
+- I fixed the first issue by clicking on the options in QuickFixes for .gitpod.yml
+- I fixed the second bug by changing "name" to "NAME" on line 51 and within the rest of the code.
 ### Remaining bugs
 ### Validator testing
 The game has been tested using PEP8 Python Validator and returned no problems.
