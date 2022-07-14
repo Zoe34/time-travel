@@ -31,8 +31,8 @@ def print_text(text: str, delay: int):
 
 def begin_game():
     '''
-    This function runs the game and all the main questions for the user are
-    placed here.
+    This function runs the game and all the initial questions are
+    placed here. It is called by the main() function.
     '''
     print_text(f"Hi {NAME}!", 2)
     print("Welcome to the journey. Would you like to begin? (yes/no)")
@@ -73,7 +73,7 @@ def begin_game():
 def open_or_carry_on():
     '''
     Function uses OPEN and CARRY_ON keywords to allow user to make a decision.
-    It is called by the begin_game() function
+    It is called by the begin_game() function.
     '''
     print("Do you want to open the door or carry on?\n")
     print("open/carry on\n")
@@ -122,7 +122,7 @@ def open_or_carry_on():
 def blue_or_red():
     '''
     Function allows user to decide whether they will pick the red or blue
-    option.
+    option. Called by open_or_carry_on() function.
     '''
     print_text("One is red, the other blue. What's your pick?", 2)
     print_text("blue/red", 3)
@@ -188,7 +188,8 @@ def open_or_not():
 
 def spin_up_or_down():
     '''
-    This function operates through the "up" and "down" keywords.
+    This function operates through the "up" and "down" keywords. It is
+    called by the open_or_not() function.
     '''
     print("Do you want to spin the crown up or down?")
     response = input("")
@@ -234,7 +235,8 @@ def spin_up_or_down():
 
 def leave_or_explore():
     '''
-    Function allows user to pick between leave/explore choices
+    Function allows user to pick between leave/explore keywords.
+    Called by the spin_up_or_down() function
     '''
     print("Do you wish to leave the house or explore the house?\n")
     print("(leave/explore)")
@@ -289,7 +291,8 @@ def leave_or_explore():
 def explore_house():
     '''
     Function calls verify_user_function so the player can input as many number
-    combinations as they want until they are happy with the outcome.
+    combinations as they want until they are happy with the outcome. It is
+    called by leave_or_explore().
     '''
     print_text("You wonder off into the attic", 3)
     print_text("Amongst all the clutter you spot", 3)
@@ -309,7 +312,8 @@ def explore_house():
 def verify_user_response():
     '''
     The function verifies if the user is happy with their response for the
-    year combination. It repeats itself if the user chooses yes as the answer
+    year combination. It calls itself if the user chooses no as the answer.
+    Otherwise the game ends.
     '''
     print_text("Is that the correct year? (yes/no)", 2)
     response = input("")

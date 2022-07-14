@@ -53,8 +53,7 @@ When the player decides they no longer want to play this message appears:
 
 ## Data model
 - The game is based on a story which unfolds. The direction and outcome depend on the user's choice e.g., "answer/ignore".
-- The text of the story is printed using "print_text" and the player is referred to by their name in the game using an f string: print_text(f"Hi {name}!", 2)
-- The 2 after every line of text is the amount of time delayed between each printed line.
+- The text of the story is printed using "print_text" and the player is referred to by their name in the game using an f string: print_text(f"Hi {NAME}!", 2)
 - The flowchart for this game was created using Lucidchart:
 ![Flowchart image](assets/flowchart.png)
 
@@ -63,7 +62,7 @@ When the player decides they no longer want to play this message appears:
 ### Bugs
 The bugs I came across with pylint:
 1. ms-toolsai.jupyter extension is not synced, but not added in .gitpod.yml:
-Fixed by clicking on the options in QuickFixes for .gitpod.yml
+Fixed by clicking on the options in Quick Fixes for .gitpod.yml
 2. Constant name "name" doesn't conform to UPPER_CASE naming stylepylint(invalid-name):
 Fixed by changing "name" to "NAME" on line 50, 51 and within the rest of the code.
 3. Using the global statementpylint(global-statement):
@@ -97,12 +96,12 @@ The game has been tested using PEP8 Python Validator and returned no problems.
 - Python linting was used to check for any problems during the development of the game.
 
 ## Deployment
-The repository was created in Github using "New" on the right - hand side in the repository section.
+The repository was created in GitHub using "New" on the right - hand side in the repository section.
 The template was provided by Code Institute: https://github.com/Code-Institute-Org/python-essentials-template
 
 ### GitHub:
 To open the code for this project through GitHub enter https://github.com/Zoe34/time-travel.git into the browser.
-Click the green "Gitpod" button
+Click the green "Gitpod" button.
 Click "cancel" and then "More actions"; "Open in browser"
 
 ### Deploying to Heroku:
