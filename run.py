@@ -23,17 +23,10 @@ from keywords import (
 
 def print_text(text: str, delay: int):
     '''
-    Function prints text after user input
+    Function prints text of the story
     '''
     print(text)
     time.sleep(delay)
-
-
-def start_again():
-    '''
-    Game begins again when the user decides to quit or loses the game
-    '''
-    begin_game()
 
 
 def begin_game():
@@ -47,9 +40,9 @@ def begin_game():
     while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
         print_text("Invalid response, please try again.", 2)
         response = input("")
-    if response in YES:
+    if response in [YES, YES.capitalize()]:
         print_text("Let's begin!", 2)
-    if response in NO:
+    if response in [NO, NO.capitalize()]:
         print_text("Goodbye, thanks for coming!", 2)
         quit()
 
@@ -137,7 +130,6 @@ def blue_or_red():
     while response not in [BLUE, RED, BLUE.capitalize(), RED.capitalize()]:
         print_text("Invalid response, please try again", 2)
     if response in [RED, RED.capitalize()]:
-        print_text("", 2)
         print_text("", 2)
         print_text(f"You picked {response}", 3)
         print_text("You have been sucked into a black hole.", 3)
@@ -317,7 +309,7 @@ def explore_house():
 def verify_user_response():
     '''
     The function verifies if the user is happy with their response for the
-    year combination
+    year combination. It repeats itself if the user chooses yes as the answer
     '''
     print_text("Is that the correct year? (yes/no)", 2)
     response = input("")
@@ -335,7 +327,7 @@ def verify_user_response():
 
 def main():
     '''
-    This function runs the game and all the other functions
+    This function runs the game by calling begin_game()
     '''
 
     begin_game()

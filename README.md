@@ -69,6 +69,9 @@ Fixed by changing "name" to "NAME" on line 50, 51 and within the rest of the cod
 3. Using the global statementpylint(global-statement):
 The third bug was fixed by moving 'NAME' to the keywords file and adding it to the imported keywords list in run.py.
 
+### Remaining bugs
+All bugs have been fixed.
+
 ### User stories:
 - As a new user I would like to operate using simple words and make decisions within the game:
 ![Question screenshot](assets/game-screenshots.png/decisions.png)
@@ -79,10 +82,10 @@ The third bug was fixed by moving 'NAME' to the keywords file and adding it to t
 ![Confirmation of choices](assets/game-screenshots.png/confirmation.png)
 - I would like to play the game in the form of an interactive story, which contains a timeline and a plot:
 ![Main storyline](assets/game-screenshots.png/storyline.png)
+- As a new user I would like to get a message if I write the incorrect answer by mistake:
+![error message](assets/game-screenshots.png/error-message.png)
 
 
-### Remaining bugs
-All bugs have been fixed.
 ### Validator testing
 The game has been tested using PEP8 Python Validator and returned no problems.
 
@@ -94,7 +97,7 @@ The game has been tested using PEP8 Python Validator and returned no problems.
 - Python linting was used to check for any problems during the development of the game.
 
 ## Deployment
-The repository was created in Github using "New" on the left - hand side in the repository section.
+The repository was created in Github using "New" on the right - hand side in the repository section.
 The template was provided by Code Institute: https://github.com/Code-Institute-Org/python-essentials-template
 
 ### GitHub:
