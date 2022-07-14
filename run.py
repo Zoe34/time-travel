@@ -17,7 +17,7 @@ from keywords import (
     DOWN,
     LEAVE,
     EXPLORE,
-    NAME
+    NAME,
 )
 
 
@@ -44,7 +44,7 @@ def begin_game():
     print_text(f"Hi {NAME}!", 2)
     print("Welcome to the journey. Would you like to begin? (yes/no)")
     response = input("")
-    while response not in [YES, NO]:
+    while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
         print_text("Invalid response, please try again.", 2)
         response = input("")
     if response in YES:
@@ -59,11 +59,11 @@ def begin_game():
     print_text("Are you ready? (yes/no)", 2)
     response = input("")
 
-    while response not in [YES, NO]:
+    while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
         print_text("Invalid response, please try again.", 2)
         response = input("")
 
-    if response in YES:
+    if response in [YES, YES.capitalize()]:
         print_text("Great. You are currently in your family home.", 2)
         print_text("However not the one you know of.", 2)
         print_text("The interior looks different.", 2)
@@ -72,7 +72,7 @@ def begin_game():
         print_text("Your hear a noise in the room next door.", 2)
         print_text("A banging and sounds of moved items across a surface", 2)
         open_or_carry_on()
-    elif response in NO:
+    elif response in [NO, NO.capitalize()]:
         print_text("Goodbye, thanks for coming!", 2)
         quit()
 
@@ -86,10 +86,11 @@ def open_or_carry_on():
     print("open/carry on\n")
     response = input("")
 
-    while response not in [OPEN, CARRY_ON]:
+    while response not in [OPEN, CARRY_ON, OPEN.capitalize(),
+                           CARRY_ON.capitalize()]:
         print("Invalid response, please try again.")
         response = input("")
-    if response in OPEN:
+    if response in [OPEN, OPEN.capitalize()]:
         print_text("You open the door and find an older woman.", 3)
         print_text("She has her back to you", 3)
         print_text("She's wiping down the surface of her bedside table", 3)
@@ -119,7 +120,7 @@ def open_or_carry_on():
         print_text("and two levers inside", 3)
         blue_or_red()
 
-    elif response in CARRY_ON:
+    elif response in [CARRY_ON, CARRY_ON.capitalize()]:
         print_text("You walk along the corridor", 2)
         print_text("and you suddenly hear knocking at the front door.", 2)
         open_or_not()
@@ -133,9 +134,9 @@ def blue_or_red():
     print_text("One is red, the other blue. What's your pick?", 2)
     print_text("blue/red", 3)
     response = input("")
-    while response not in [BLUE, RED]:
+    while response not in [BLUE, RED, BLUE.capitalize(), RED.capitalize()]:
         print_text("Invalid response, please try again", 2)
-    if response in RED:
+    if response in [RED, RED.capitalize()]:
         print_text("", 2)
         print_text("", 2)
         print_text(f"You picked {response}", 3)
@@ -147,7 +148,7 @@ def blue_or_red():
         print_text("", 1)
         print_text("", 1)
         quit()
-    elif response in BLUE:
+    elif response in [BLUE, BLUE.capitalize()]:
         print(f"You picked {response}")
         print_text("You feel the machine shaking and tumbling around.", 3)
         print_text("You wake up in the woods. The ones next to your home.", 3)
@@ -169,10 +170,11 @@ def open_or_not():
     print("Will you open the door? (answer/ignore)")
     response = input("")
 
-    while response not in [ANSWER, IGNORE]:
+    while response not in [ANSWER, IGNORE, ANSWER.capitalize(),
+                           IGNORE.capitalize()]:
         print_text("Invalid response, please try again.", 2)
         response = input("")
-    if response in ANSWER:
+    if response in [ANSWER, ANSWER.capitalize()]:
         print_text("You walk down the stairs and towards the front door", 3)
         print_text("You open the door and see no one.", 3)
         print_text("Instead of a person you spot a parcel", 3)
@@ -182,7 +184,7 @@ def open_or_not():
         print_text("Upon opening the package you realise", 3)
         print_text("it held a watch. It has a golden crown on the side", 3)
         spin_up_or_down()
-    elif response in IGNORE:
+    elif response in [IGNORE, IGNORE.capitalize()]:
         print_text("You head to the garden", 3)
         print_text("and spot a large shed in the corner", 3)
         print_text("When entering you notice a huge metal construction", 3)
@@ -199,10 +201,10 @@ def spin_up_or_down():
     print("Do you want to spin the crown up or down?")
     response = input("")
 
-    while response not in [UP, DOWN]:
+    while response not in [UP, DOWN, UP.capitalize(), DOWN.capitalize()]:
         print_text("Invalid response, please try again.", 2)
         response = input("")
-    if response in UP:
+    if response in [UP, UP.capitalize()]:
         print_text("You spin upwards.", 3)
         print_text("Your surroundings become blurred.", 3)
         print_text("You start to sway and realise", 3)
@@ -217,7 +219,7 @@ def spin_up_or_down():
         print_text("it did in the 1920s from which you came.", 3)
         print_text("You made it back, congratulations", 3)
         quit()
-    elif response in DOWN:
+    elif response in [DOWN, DOWN.capitalize()]:
         print_text("You spin down.", 3)
         print_text("Your surroundings become blurred.", 3)
         print_text("You start to sway and realise", 3)
@@ -246,10 +248,11 @@ def leave_or_explore():
     print("(leave/explore)")
     response = input("")
 
-    if response not in [LEAVE, EXPLORE]:
+    if response not in [LEAVE, EXPLORE, LEAVE.capitalize(),
+                        EXPLORE.capitalize()]:
         print_text("Invalid response, please try again", 2)
         response = input("")
-    while response in LEAVE:
+    while response in [LEAVE, LEAVE.capitalize()]:
         print_text("You step outside", 3)
         print_text("The house is in the countryside", 3)
         print_text("surrounded by woodlands", 3)
@@ -287,7 +290,7 @@ def leave_or_explore():
         print_text("becomes blurry again.", 3)
         print_text("You have escaped back to your time, congratulations", 3)
         quit()
-    if response in EXPLORE:
+    if response in [EXPLORE, EXPLORE.capitalize()]:
         explore_house()
 
 
@@ -318,13 +321,13 @@ def verify_user_response():
     '''
     print_text("Is that the correct year? (yes/no)", 2)
     response = input("")
-    if response not in [YES, NO]:
+    if response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
         print_text("Invalid response, please try again", 2)
         response = input("")
-    while response in YES:
+    while response in [YES, YES.capitalize()]:
         print_text("Congratulations, you completed the game", 2)
         quit()
-    if response in NO:
+    if response in [NO, NO.capitalize()]:
         print_text("Try typing in the combination again", 2)
         response = input("")
         verify_user_response()
