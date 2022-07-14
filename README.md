@@ -52,10 +52,10 @@ When the player decides they no longer want to play this message appears:
 
 
 ## Data model
-The game is based on a story which unfolds. The direction and outcome depend on the user's choice e.g., "answer/ignore".
-The text of the story is printed using "print_text" and the player is referred to by their name in the game using an f string: print_text(f"Hi {name}!", 2)
-The 2 after every line of text is the amount of time delayed between each printed line.
-The flowchart for this game was created using Lucidchart:
+- The game is based on a story which unfolds. The direction and outcome depend on the user's choice e.g., "answer/ignore".
+- The text of the story is printed using "print_text" and the player is referred to by their name in the game using an f string: print_text(f"Hi {name}!", 2)
+- The 2 after every line of text is the amount of time delayed between each printed line.
+- The flowchart for this game was created using Lucidchart:
 ![Flowchart image](assets/flowchart.png)
 
 ## Testing
@@ -87,6 +87,11 @@ All bugs have been fixed.
 The game has been tested using PEP8 Python Validator and returned no problems.
 
 ## Technology:
+- Heroku was used to deploy this project and create the live link
+- The project was made in Gitpod, and any commits were pushed to the repository in GitHub.
+- Lucidchart was used to create the flowchart for this project as a baseline plot for the game.
+- The PEP8 Python Validator Test was used to check for any errors.
+- Python linting was used to check for any problems during the development of the game.
 
 ## Deployment
 The repository was created in Github using "New" on the left - hand side in the repository section.
@@ -102,6 +107,7 @@ Click "cancel" and then "More actions"; "Open in browser"
 - The app was named time-travel22
 - The location was set to Europe before the app was created
 - The python and node.js buildpacks were added and saved
+- This project has no CREDS files, so no Config Vars were set
 - In the Deploy section the deployment was connected to GitHub
 - The repository was searched by name and connected to Heroku
 - The project was manually deployed
