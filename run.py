@@ -326,7 +326,7 @@ def verify_user_response():
     if response in [NO, NO.capitalize()]:
         print_text("Try typing in the combination again", 2)
         response = input("")
-        verify_user_response()
+    verify_user_response()
 
 
 def main():
