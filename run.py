@@ -4,6 +4,7 @@ The import allows for a delay between pieces of text
 
 import time
 
+# Keywords used throughout the game to make choices.
 from keywords import (
     YES,
     NO,
@@ -23,7 +24,8 @@ from keywords import (
 
 def print_text(text: str, delay: int):
     '''
-    Function prints text of the story
+    Function prints text of the story with a delay of the specified number
+    of seconds
     '''
     print(text)
     time.sleep(delay)
@@ -31,12 +33,15 @@ def print_text(text: str, delay: int):
 
 def begin_game():
     '''
-    This function runs the game and all the initial questions are
-    placed here. It is called by the main() function.
+    This function starts the game and briefly explains the theme.
+    It is called by the main() function.
     '''
+    # The f string calls the user by their name and is followed by a delay of
+    # 2 seconds
     print_text(f"Hi {NAME}!", 2)
     print("Welcome to the journey. Would you like to begin? (yes/no)")
     response = input("")
+    # User can input the keyword lowercase or uppercase
     while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
         print_text("Invalid response, please try again.", 2)
         response = input("")
@@ -44,6 +49,7 @@ def begin_game():
         print_text("Let's begin!", 2)
     if response in [NO, NO.capitalize()]:
         print_text("Goodbye, thanks for coming!", 2)
+        # Game ends here
         quit()
 
     print_text("You have time travelled to the past.", 2)
@@ -91,6 +97,7 @@ def open_or_carry_on():
         print_text("The woman looks very familiar.", 3)
         print_text("Her facial features look very similar to yours.", 3)
         print_text("You realise this is your great great grandmother", 3)
+        # User called by name again, this time there is a 3 second delay.
         print_text(f"'Oh I was expecting you {NAME}'", 3)
         print_text("She looks very pleased to see you.", 3)
         print_text(f"'We need to hurry up {NAME},'", 3)
@@ -121,7 +128,7 @@ def open_or_carry_on():
 
 def blue_or_red():
     '''
-    Function allows user to decide whether they will pick the red or blue
+    Function allows user to decide whether they will pick the RED or BLUE
     option. Called by open_or_carry_on() function.
     '''
     print_text("One is red, the other blue. What's your pick?", 2)
@@ -130,7 +137,9 @@ def blue_or_red():
     while response not in [BLUE, RED, BLUE.capitalize(), RED.capitalize()]:
         print_text("Invalid response, please try again", 2)
     if response in [RED, RED.capitalize()]:
+        # This is an empty line pause before the next piece of text is printed.
         print_text("", 2)
+        # The user's response is confirmed here.
         print_text(f"You picked {response}", 3)
         print_text("You have been sucked into a black hole.", 3)
         print_text("", 1)
@@ -157,7 +166,8 @@ def blue_or_red():
 def open_or_not():
     '''
     The user can decide whether to open the door or not in the game.
-    This function uses the "answer" and "ignore" keywords.
+    This function uses the "ANSWER" and "IGNORE" keywords.
+    Called by the open_or_carry_on() function.
     '''
     print("Will you open the door? (answer/ignore)")
     response = input("")
@@ -188,7 +198,7 @@ def open_or_not():
 
 def spin_up_or_down():
     '''
-    This function operates through the "up" and "down" keywords. It is
+    This function operates through the "UP" and "DOWN" keywords. It is
     called by the open_or_not() function.
     '''
     print("Do you want to spin the crown up or down?")
@@ -196,6 +206,7 @@ def spin_up_or_down():
 
     while response not in [UP, DOWN, UP.capitalize(), DOWN.capitalize()]:
         print_text("Invalid response, please try again.", 2)
+        # User can input again here
         response = input("")
     if response in [UP, UP.capitalize()]:
         print_text("You spin upwards.", 3)
@@ -235,7 +246,7 @@ def spin_up_or_down():
 
 def leave_or_explore():
     '''
-    Function allows user to pick between leave/explore keywords.
+    Function allows user to pick between LEAVE/EXPLORE keywords.
     Called by the spin_up_or_down() function
     '''
     print("Do you wish to leave the house or explore the house?\n")
@@ -310,8 +321,8 @@ def explore_house():
 def verify_user_response():
     '''
     The function verifies if the user is happy with their response for the
-    year combination. It calls itself if the user chooses no as the answer.
-    Otherwise the game ends.
+    year combination. It calls number_verification() if the user chooses
+    no as the answer. Otherwise the game ends.
     '''
     print_text("Is that the correct year? (yes/no)", 2)
     response = input("")
@@ -329,13 +340,15 @@ def verify_user_response():
 def number_verification():
     '''
     Checks if the user's response is an integer. If not the user must
-    input the number again.
+    input the number again. Function called by explore_house().
+    Function repeats itself if user input is not a number.
     '''
     try:
         response = int(input(""))
         print_text(f"You have chosen {response}", 2)
         verify_user_response()
     except ValueError:
+        # If input is not an integer this is considered an error.
         print("That was not a number. Try again...")
         number_verification()
 
@@ -344,7 +357,7 @@ def main():
     '''
     This function runs the game by calling begin_game()
     '''
-
+    
     begin_game()
 
 
