@@ -290,23 +290,21 @@ def leave_or_explore():
 
 def explore_house():
     '''
-    Function calls verify_user_function so the player can input as many number
-    combinations as they want until they are happy with the outcome. It is
-    called by leave_or_explore().
+    Function calls number_verification() function so the player can input
+    as many number combinations as they want until they are happy with the
+    outcome. It is called by leave_or_explore().
     '''
     print_text("You wonder off into the attic", 3)
     print_text("Amongst all the clutter you spot", 3)
     print_text("a wooden door; about a metre tall.", 3)
     print_text("It's locked with a heavy padlock.", 3)
     print_text("The current combinaton reads", 3)
-    print_text("1", 2)
-    print_text("9", 2)
-    print_text("6", 2)
-    print_text("2", 2)
+    print_text("1", 1)
+    print_text("9", 1)
+    print_text("6", 1)
+    print_text("2", 1)
     print_text("Try and set the lock to your year", 2)
-    response = input("")
-    print_text(f"You have chosen {response}", 2)
-    verify_user_response()
+    number_verification()
 
 
 def verify_user_response():
@@ -325,8 +323,21 @@ def verify_user_response():
         quit()
     if response in [NO, NO.capitalize()]:
         print_text("Try typing in the combination again", 2)
-        response = input("")
-    verify_user_response()
+        number_verification()
+
+
+def number_verification():
+    '''
+    Checks if the user's response is an integer. If not the user must
+    input the number again.
+    '''
+    try:
+        response = int(input(""))
+        print_text(f"You have chosen {response}", 2)
+        verify_user_response()
+    except ValueError:
+        print("That was not a number. Try again...")
+        number_verification()
 
 
 def main():
