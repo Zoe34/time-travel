@@ -16,11 +16,10 @@ After winning or losing the game stops.
 To refresh the game the player needs to click "RUN PROGRAM"
 
 ## Features
-There is one main page from which the game operates and allows the user to submit their responses
 
 ### Existing features
 Questions for the player and a selection of answers they can choose:
-![Question for the player](assets/game-screenshots.png/decisions.png)
+![Question for the player](assets/game-screenshots.png/answers.png)
 
 Sometimes the game confirms the choices made by the user by feeding back the answer:
 ![Answer confirmation](assets/game-screenshots.png/confirmation.png)

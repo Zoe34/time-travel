@@ -1,10 +1,6 @@
 '''
-The import allows for a delay between pieces of text
+The keywords used throughout the game to make choices
 '''
-
-import time
-
-# Keywords used throughout the game to make choices.
 from keywords import (
     YES,
     NO,
@@ -22,58 +18,56 @@ from keywords import (
 )
 
 
-def print_text(text: str, delay: int):
-    '''
-    Function prints text of the story with a delay of the specified number
-    of seconds
-    '''
-    print(text)
-    time.sleep(delay)
-
-
 def begin_game():
     '''
     This function starts the game and briefly explains the theme.
     It is called by the main() function.
     '''
-    # The f string calls the user by their name and is followed by a delay of
-    # 2 seconds
-    print_text(f"Hi {NAME}!", 2)
+    # The f string calls the user by their name
+    print(f"Hi {NAME}!")
     print("Welcome to the journey. Would you like to begin? (yes/no)")
     response = input("")
+    print("")
+    print("")
+    print("")
+    print("")
     # User can input the keyword lowercase or uppercase
     while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
-        print_text("Invalid response, please try again.", 2)
+        print("Invalid response, please try again.")
         # User can input again here
         response = input("")
     if response in [YES, YES.capitalize()]:
-        print_text("Let's begin!", 2)
+        print("Let's begin!")
     if response in [NO, NO.capitalize()]:
-        print_text("Goodbye, thanks for coming!", 2)
+        print("Goodbye, thanks for coming!")
         # Game ends here
         quit()
 
-    print_text("You have time travelled to the past.", 2)
-    print_text("The year is 1920", 2)
-    print_text("You are looking for a way home.", 2)
-    print_text("Are you ready? (yes/no)", 2)
+    print("You have time travelled to the past.")
+    print("The year is 1920")
+    print("You are looking for a way home.")
+    print("Are you ready? (yes/no)")
     response = input("")
+    print("")
+    print("")
+    print("")
+    print("")
 
     while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
-        print_text("Invalid response, please try again.", 2)
+        print("Invalid response, please try again.")
         response = input("")
 
     if response in [YES, YES.capitalize()]:
-        print_text("Great. You are currently in your family home.", 2)
-        print_text("However not the one you know of.", 2)
-        print_text("The interior looks different.", 2)
-        print_text("You scan the room and see several unfamiliar items,", 2)
-        print_text("such as various paintings on vintage, floral wallpaper", 2)
-        print_text("Your hear a noise in the room next door.", 2)
-        print_text("A banging and sounds of moved items across a surface", 2)
+        print("Great. You are currently in your family home.")
+        print("However not the one you know of.")
+        print("The interior looks different.")
+        print("You scan the room and see several unfamiliar items,")
+        print("such as various paintings on vintage, floral wallpaper")
+        print("Your hear a noise in the room next door.")
+        print("A banging and sounds of moved items across a surface")
         open_or_carry_on()
     elif response in [NO, NO.capitalize()]:
-        print_text("Goodbye, thanks for coming!", 2)
+        print("Goodbye, thanks for coming!")
         quit()
 
 
@@ -85,45 +79,48 @@ def open_or_carry_on():
     print("Do you want to open the door or carry on?\n")
     print("open/carry on\n")
     response = input("")
+    print("")
+    print("")
+    print("")
+    print("")
 
     while response not in [OPEN, CARRY_ON, OPEN.capitalize(),
                            CARRY_ON.capitalize()]:
         print("Invalid response, please try again.")
         response = input("")
     if response in [OPEN, OPEN.capitalize()]:
-        print_text("You open the door and find an older woman.", 3)
-        print_text("She has her back to you", 3)
-        print_text("She's wiping down the surface of her bedside table", 3)
-        print_text("She doesn't notice you until a few seconds later", 3)
-        print_text("The woman looks very familiar.", 3)
-        print_text("Her facial features look very similar to yours.", 3)
-        print_text("You realise this is your great great grandmother", 3)
-        # User called by name again, this time there is a 3 second delay.
-        print_text(f"'Oh I was expecting you {NAME}'", 3)
-        print_text("She looks very pleased to see you.", 3)
-        print_text(f"'We need to hurry up {NAME},'", 3)
-        print_text("'otherwise you'll be stuck in this time period.'", 3)
-        print_text("She opens a drawer of her bedside table", 3)
-        print_text("and pulls out a flask with a yellowish substance.", 3)
-        print_text("'Drink this and try to sleep,'", 3)
-        print_text("'we'll see each other again at some point'", 3)
-        print_text("She gives you a warm smile and leaves the room.", 3)
-        print_text("You wake up but have no idea how much time has passed.", 3)
-        print_text("The room decor looks different.", 3)
-        print_text("You look at the calendar.", 3)
-        print_text("1962; Great the drink worked", 3)
-        print_text("You get up and walk down to the only place you haven't", 3)
-        print_text("explored yet: the basement", 3)
-        print_text("The dark room appears to have", 3)
-        print_text("a large metal construction", 3)
-        print_text("Quite odd for something in a household", 3)
-        print_text("The giant metal box has an entrance", 3)
-        print_text("and two levers inside", 3)
+        print("You open the door and find an older woman.")
+        print("She has her back to you")
+        print("She's wiping down the surface of her bedside table")
+        print("She doesn't notice you until a few seconds later")
+        print("The woman looks very familiar.")
+        print("Her facial features look very similar to yours.")
+        print("You realise this is your great great grandmother")
+        print(f"'Oh I was expecting you {NAME}'")
+        print("She looks very pleased to see you.")
+        print(f"'We need to hurry up {NAME},'")
+        print("'otherwise you'll be stuck in this time period.'")
+        print("She opens a drawer of her bedside table")
+        print("and pulls out a flask with a yellowish substance.")
+        print("'Drink this and try to sleep,'")
+        print("'we'll see each other again at some point'")
+        print("She gives you a warm smile and leaves the room.")
+        print("You wake up but have no idea how much time has passed.")
+        print("The room decor looks different.")
+        print("You look at the calendar.")
+        print("1962; Great the drink worked")
+        print("You get up and walk down to the only place you haven't")
+        print("explored yet: the basement")
+        print("The dark room appears to have")
+        print("a large metal construction")
+        print("Quite odd for something in a household")
+        print("The giant metal box has an entrance")
+        print("and two levers inside")
         blue_or_red()
 
     elif response in [CARRY_ON, CARRY_ON.capitalize()]:
-        print_text("You walk along the corridor", 2)
-        print_text("and you suddenly hear knocking at the front door.", 2)
+        print("You walk along the corridor")
+        print("and you suddenly hear knocking at the front door.")
         open_or_not()
 
 
@@ -132,37 +129,41 @@ def blue_or_red():
     Function allows user to decide whether they will pick the RED or BLUE
     option. Called by open_or_carry_on() function.
     '''
-    print_text("One is red, the other blue. What's your pick?", 2)
-    print_text("blue/red", 3)
+    print("One is red, the other blue. What's your pick?")
+    print("blue/red")
     response = input("")
+    print("")
+    print("")
+    print("")
+    print("")
     while response not in [BLUE, RED, BLUE.capitalize(), RED.capitalize()]:
-        print_text("Invalid response, please try again", 2)
+        print("Invalid response, please try again")
         response = input("")
 
     if response in [RED, RED.capitalize()]:
         # This is an empty line pause before the next piece of text is printed.
-        print_text("", 2)
+        print("")
         # The user's response is confirmed here.
-        print_text(f"You picked {response}", 3)
-        print_text("You have been sucked into a black hole.", 3)
-        print_text("", 1)
-        print_text("The time capsule couldn't take the pressure", 3)
-        print_text("", 1)
-        print_text("Game over.", 2)
-        print_text("", 1)
-        print_text("", 1)
+        print(f"You picked {response}")
+        print("You have been sucked into a black hole.")
+        print("")
+        print("The time capsule couldn't take the pressure")
+        print("")
+        print("Game over.")
+        print("")
+        print("")
         quit()
     elif response in [BLUE, BLUE.capitalize()]:
         print(f"You picked {response}")
-        print_text("You feel the machine shaking and tumbling around.", 3)
-        print_text("You wake up in the woods. The ones next to your home.", 3)
-        print_text("It's impossble to tell what year it is", 3)
-        print_text("So you leave the time machine in the woods", 3)
-        print_text("and head to the house", 3)
-        print_text("As you enter everything looks familiar.", 3)
-        print_text("Your mum walks in from the living room", 3)
-        print_text(f"'Hi, {NAME}, how was school?'", 3)
-        print_text("You made your way home, congratulations!", 3)
+        print("You feel the machine shaking and tumbling around.")
+        print("You wake up in the woods. The ones next to your home.")
+        print("It's impossble to tell what year it is")
+        print("So you leave the time machine in the woods")
+        print("and head to the house")
+        print("As you enter everything looks familiar.")
+        print("Your mum walks in from the living room")
+        print(f"'Hi, {NAME}, how was school?'")
+        print("You made your way home, congratulations!")
         quit()
 
 
@@ -174,28 +175,32 @@ def open_or_not():
     '''
     print("Will you open the door? (answer/ignore)")
     response = input("")
+    print("")
+    print("")
+    print("")
+    print("")
 
     while response not in [ANSWER, IGNORE, ANSWER.capitalize(),
                            IGNORE.capitalize()]:
-        print_text("Invalid response, please try again.", 2)
+        print("Invalid response, please try again.")
         response = input("")
     if response in [ANSWER, ANSWER.capitalize()]:
-        print_text("You walk down the stairs and towards the front door", 3)
-        print_text("You open the door and see no one.", 3)
-        print_text("Instead of a person you spot a parcel", 3)
-        print_text("on the ground.", 3)
-        print_text("You see your name written in beautiful,", 3)
-        print_text("cursive handwriting on the brown wrapping paper.", 3)
-        print_text("Upon opening the package you realise", 3)
-        print_text("it held a watch. It has a golden crown on the side", 3)
+        print("You walk down the stairs and towards the front door")
+        print("You open the door and see no one.")
+        print("Instead of a person you spot a parcel")
+        print("on the ground.")
+        print("You see your name written in beautiful,")
+        print("cursive handwriting on the brown wrapping paper.")
+        print("Upon opening the package you realise")
+        print("it held a watch. It has a golden crown on the side")
         spin_up_or_down()
     elif response in [IGNORE, IGNORE.capitalize()]:
-        print_text("You head to the garden", 3)
-        print_text("and spot a large shed in the corner", 3)
-        print_text("When entering you notice a huge metal construction", 3)
-        print_text("You also spot it has an entrance", 3)
-        print_text("You step inside and find two different", 3)
-        print_text("coloured levers", 3)
+        print("You head to the garden")
+        print("and spot a large shed in the corner")
+        print("When entering you notice a huge metal construction")
+        print("You also spot it has an entrance")
+        print("You step inside and find two different")
+        print("coloured levers")
         blue_or_red()
 
 
@@ -206,43 +211,47 @@ def spin_up_or_down():
     '''
     print("Do you want to spin the crown up or down?")
     response = input("")
+    print("")
+    print("")
+    print("")
+    print("")
 
     while response not in [UP, DOWN, UP.capitalize(), DOWN.capitalize()]:
-        print_text("Invalid response, please try again.", 2)
+        print("Invalid response, please try again.")
         response = input("")
     if response in [UP, UP.capitalize()]:
-        print_text("You spin upwards.", 3)
-        print_text("Your surroundings become blurred.", 3)
-        print_text("You start to sway and realise", 3)
-        print_text("you can no longer hold yourself up.", 3)
-        print_text("Your vision goes fully black.", 3)
-        print_text("...", 2)
-        print_text("", 1)
-        print_text("", 1)
-        print_text("When you open your eyes you recognise your home;", 3)
-        print_text("However when you look down at the watch", 3)
-        print_text("it is smashed, rusty and looks nothing like", 3)
-        print_text("it did in the 1920s from which you came.", 3)
-        print_text("You made it back, congratulations", 3)
+        print("You spin upwards.")
+        print("Your surroundings become blurred.")
+        print("You start to sway and realise")
+        print("you can no longer hold yourself up.")
+        print("Your vision goes fully black.")
+        print("...")
+        print("")
+        print("")
+        print("When you open your eyes you recognise your home;")
+        print("However when you look down at the watch")
+        print("it is smashed, rusty and looks nothing like")
+        print("it did in the 1920s from which you came.")
+        print("You made it back, congratulations")
         quit()
     elif response in [DOWN, DOWN.capitalize()]:
-        print_text("You spin down.", 3)
-        print_text("Your surroundings become blurred.", 3)
-        print_text("You start to sway and realise", 3)
-        print_text("you can no longer hold yourself up.", 3)
-        print_text("Your vision turns fully black.", 3)
-        print_text("...", 2)
-        print_text("", 1)
-        print_text("", 1)
-        print_text("When you open your eyes you are still lying down", 3)
-        print_text("in the hallway", 3)
-        print_text("The bright green wallpaper draws your attention", 3)
-        print_text("as it's different from the previous 1920 decor", 3)
-        print_text("You check the newspaper on top of the", 3)
-        print_text("large table on the side.", 3)
-        print_text("23.06.1962", 3)
-        print_text("You wonder who dropped the watch off", 3)
-        print_text("at the front door. They must have known you.", 3)
+        print("You spin down.")
+        print("Your surroundings become blurred.")
+        print("You start to sway and realise")
+        print("you can no longer hold yourself up.")
+        print("Your vision turns fully black.")
+        print("...")
+        print("")
+        print("")
+        print("When you open your eyes you are still lying down")
+        print("in the hallway")
+        print("The bright green wallpaper draws your attention")
+        print("as it's different from the previous 1920 decor")
+        print("You check the newspaper on top of the")
+        print("large table on the side.")
+        print("23.06.1962")
+        print("You wonder who dropped the watch off")
+        print("at the front door. They must have known you.")
         leave_or_explore()
 
 
@@ -254,48 +263,52 @@ def leave_or_explore():
     print("Do you wish to leave the house or explore the house?\n")
     print("(leave/explore)")
     response = input("")
+    print("")
+    print("")
+    print("")
+    print("")
 
     while response not in [LEAVE, EXPLORE, LEAVE.capitalize(),
                            EXPLORE.capitalize()]:
-        print_text("Invalid response, please try again", 2)
+        print("Invalid response, please try again")
         response = input("")
     if response in [LEAVE, LEAVE.capitalize()]:
-        print_text("You step outside", 3)
-        print_text("The house is in the countryside", 3)
-        print_text("surrounded by woodlands", 3)
-        print_text("As you walk further out you spot a silhouette", 3)
-        print_text("standing next to a tree", 3)
-        print_text("You try to ignore it and keep walking", 3)
-        print_text("You are now very far from your front door", 3)
-        print_text("The figure starts walking towards you", 3)
-        print_text("", 2)
-        print_text("He's running.", 3)
-        print_text("He runs up to you.", 3)
-        print_text('"I need that watch" says the man', 3)
-        print_text("He looks very impatient", 3)
-        print_text("Something doesn't feel right and", 3)
-        print_text("You begin to run", 3)
-        print_text("At this point the closest house is the ", 3)
-        print_text("neighbours house.", 3)
-        print_text("Your sprint to the front door", 3)
-        print_text("And frantically pound on the front door", 3)
-        print_text("A tall man opens the door", 3)
-        print_text("He glances at you and then", 3)
-        print_text("at the watch you're holding", 3)
-        print_text("He looks past you and sees the figure behind you", 3)
-        print_text("You read fear and distress from his face", 3)
-        print_text("He pushes you inside and slams the door shut", 3)
-        print_text(f"You must be {NAME}, I was told you would", 3)
-        print_text("be coming", 3)
-        print_text("He takes the broken watch and inspects it", 3)
-        print_text("We'll have to fix that if you want to return home", 3)
-        print_text("He walks into a small cluttered room and begins", 3)
-        print_text("to fix the smashed watch", 3)
-        print_text("A few minutes lates he hands you the watch", 3)
-        print_text("and instructs that you spin upwards", 3)
-        print_text("You follow the instructions and your vision ", 3)
-        print_text("becomes blurry again.", 3)
-        print_text("You have escaped back to your time, congratulations", 3)
+        print("You step outside")
+        print("The house is in the countryside")
+        print("surrounded by woodlands")
+        print("As you walk further out you spot a silhouette")
+        print("standing next to a tree")
+        print("You try to ignore it and keep walking")
+        print("You are now very far from your front door")
+        print("The figure starts walking towards you")
+        print("")
+        print("He's running.")
+        print("He runs up to you.")
+        print('"I need that watch" says the man')
+        print("He looks very impatient")
+        print("Something doesn't feel right and")
+        print("You begin to run")
+        print("At this point the closest house is the ")
+        print("neighbours house.")
+        print("Your sprint to the front door")
+        print("And frantically pound on the front door")
+        print("A tall man opens the door")
+        print("He glances at you and then")
+        print("at the watch you're holding")
+        print("He looks past you and sees the figure behind you")
+        print("You read fear and distress from his face")
+        print("He pushes you inside and slams the door shut")
+        print(f"You must be {NAME}, I was told you would")
+        print("be coming")
+        print("He takes the broken watch and inspects it")
+        print("We'll have to fix that if you want to return home")
+        print("He walks into a small cluttered room and begins")
+        print("to fix the smashed watch")
+        print("A few minutes lates he hands you the watch")
+        print("and instructs that you spin upwards")
+        print("You follow the instructions and your vision ")
+        print("becomes blurry again.")
+        print("You have escaped back to your time, congratulations")
         quit()
     if response in [EXPLORE, EXPLORE.capitalize()]:
         explore_house()
@@ -307,16 +320,16 @@ def explore_house():
     as many number combinations as they want until they are happy with the
     outcome. It is called by leave_or_explore().
     '''
-    print_text("You wonder off into the attic", 3)
-    print_text("Amongst all the clutter you spot", 3)
-    print_text("a wooden door; about a metre tall.", 3)
-    print_text("It's locked with a heavy padlock.", 3)
-    print_text("The current combinaton reads", 3)
-    print_text("1", 1)
-    print_text("9", 1)
-    print_text("6", 1)
-    print_text("2", 1)
-    print_text("Try and set the lock to your year", 2)
+    print("You wonder off into the attic")
+    print("Amongst all the clutter you spot")
+    print("a wooden door; about a metre tall.")
+    print("It's locked with a heavy padlock.")
+    print("The current combinaton reads")
+    print("1")
+    print("9")
+    print("6")
+    print("2")
+    print("Try and set the lock to your year")
     number_verification()
 
 
@@ -326,16 +339,16 @@ def verify_user_response():
     year combination. It calls number_verification() if the user chooses
     no as the answer. Otherwise the game ends.
     '''
-    print_text("Is that the correct year? (yes/no)", 2)
+    print("Is that the correct year? (yes/no)")
     response = input("")
     while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
-        print_text("Invalid response, please try again", 2)
+        print("Invalid response, please try again")
         response = input("")
     if response in [YES, YES.capitalize()]:
-        print_text("Congratulations, you completed the game", 2)
+        print("Congratulations, you completed the game")
         quit()
     if response in [NO, NO.capitalize()]:
-        print_text("Try typing in the combination again", 2)
+        print("Try typing in the combination again")
         number_verification()
 
 
@@ -347,7 +360,7 @@ def number_verification():
     '''
     try:
         response = int(input(""))
-        print_text(f"You have chosen {response}", 2)
+        print(f"You have chosen {response}")
         verify_user_response()
     except ValueError:
         # If input is not an integer this is considered an error.
