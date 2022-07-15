@@ -12,7 +12,7 @@ The aim is to time travel to the future, as the game begins in 1920.
 The player must try to pick the right choices to move back to the current year.
 When the player manages to return to the present moment a congratulating message appears.
 Some outcomes lead to a "Game over" message if the player lost.
-After winning and losing the game automatically restarts.
+After winning or losing the game stops.
 To refresh the game the player needs to click "RUN PROGRAM"
 
 ## Features
@@ -109,7 +109,6 @@ Click "cancel" and then "More actions"; "Open in browser"
 - The app was named time-travel22
 - The location was set to Europe before the app was created
 - The python and node.js buildpacks were added and saved
-- This project has no CREDS files, so no Config Vars were set
 - In the Deploy section the deployment was connected to GitHub
 - The repository was searched by name and connected to Heroku
 - The project was manually deployed

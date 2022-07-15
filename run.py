@@ -44,6 +44,7 @@ def begin_game():
     # User can input the keyword lowercase or uppercase
     while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
         print_text("Invalid response, please try again.", 2)
+        # User can input again here
         response = input("")
     if response in [YES, YES.capitalize()]:
         print_text("Let's begin!", 2)
@@ -136,6 +137,8 @@ def blue_or_red():
     response = input("")
     while response not in [BLUE, RED, BLUE.capitalize(), RED.capitalize()]:
         print_text("Invalid response, please try again", 2)
+        response = input("")
+
     if response in [RED, RED.capitalize()]:
         # This is an empty line pause before the next piece of text is printed.
         print_text("", 2)
@@ -206,7 +209,6 @@ def spin_up_or_down():
 
     while response not in [UP, DOWN, UP.capitalize(), DOWN.capitalize()]:
         print_text("Invalid response, please try again.", 2)
-        # User can input again here
         response = input("")
     if response in [UP, UP.capitalize()]:
         print_text("You spin upwards.", 3)
@@ -253,11 +255,11 @@ def leave_or_explore():
     print("(leave/explore)")
     response = input("")
 
-    if response not in [LEAVE, EXPLORE, LEAVE.capitalize(),
-                        EXPLORE.capitalize()]:
+    while response not in [LEAVE, EXPLORE, LEAVE.capitalize(),
+                           EXPLORE.capitalize()]:
         print_text("Invalid response, please try again", 2)
         response = input("")
-    while response in [LEAVE, LEAVE.capitalize()]:
+    if response in [LEAVE, LEAVE.capitalize()]:
         print_text("You step outside", 3)
         print_text("The house is in the countryside", 3)
         print_text("surrounded by woodlands", 3)
@@ -326,10 +328,10 @@ def verify_user_response():
     '''
     print_text("Is that the correct year? (yes/no)", 2)
     response = input("")
-    if response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
+    while response not in [YES, NO, YES.capitalize(), NO.capitalize()]:
         print_text("Invalid response, please try again", 2)
         response = input("")
-    while response in [YES, YES.capitalize()]:
+    if response in [YES, YES.capitalize()]:
         print_text("Congratulations, you completed the game", 2)
         quit()
     if response in [NO, NO.capitalize()]:
@@ -357,7 +359,6 @@ def main():
     '''
     This function runs the game by calling begin_game()
     '''
-    
     begin_game()
 
 
